@@ -1,0 +1,18 @@
+<div class=container>
+
+
+<h2><strong><%= @article.title %></strong></h2>
+
+<p><em><%= @article.content %></em></p>
+
+
+<p><%= link_to "Edit article", edit_article_path %></p>
+
+<p><%= link_to article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <i class="fa-solid fa-trash-can"></i>
+  <% end %> </p>
+
+<p><%= link_to "Back to list", articles_path %></p>
+
+</div>
